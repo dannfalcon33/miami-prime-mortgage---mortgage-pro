@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Home, Briefcase, Palmtree, Percent, Building } from 'lucide-react';
-import Button from './ui/Button';
+import React from "react";
+import { motion } from "framer-motion";
+import { Home, Briefcase, Palmtree, Percent, Building } from "lucide-react";
+import Button from "./ui/Button";
 
 interface LoanTypesProps {
   onOpenForm: () => void;
@@ -10,39 +10,49 @@ interface LoanTypesProps {
 const loans = [
   {
     icon: <Home className="w-8 h-8" />,
-    title: "Préstamos Convencionales",
-    description: "Tasas fijas y ajustables con las mejores condiciones del mercado para su residencia principal."
+    title: "Conventional Loans",
+    description:
+      "Fixed and adjustable rates with the best market conditions for your primary residence.",
   },
   {
     icon: <Percent className="w-8 h-8" />,
-    title: "Préstamos FHA",
-    description: "Ideal para primeros compradores. Flexibilidad en crédito y pago inicial desde el 3.5%."
+    title: "FHA Loans",
+    description:
+      "Ideal for first-time buyers. Flexibility in credit and down payment starting at 3.5%.",
   },
   {
     icon: <Building className="w-8 h-8" />,
-    title: "Inversión & DSCR",
-    description: "Califique basado en el ingreso de renta de la propiedad, no en su ingreso personal."
+    title: "Investment & DSCR",
+    description:
+      "Qualify based on the property's rental income, not your personal income.",
   },
   {
     icon: <Briefcase className="w-8 h-8" />,
-    title: "Préstamos Jumbo",
-    description: "Financiamiento para propiedades de lujo que exceden los límites conformes."
+    title: "Jumbo Loans",
+    description:
+      "Financing for luxury properties that exceed conforming limits.",
   },
   {
     icon: <Palmtree className="w-8 h-8" />,
-    title: "Extranjeros (Foreign National)",
-    description: "Programas especializados para inversores internacionales que desean comprar en Florida."
-  }
+    title: "Foreign Nationals",
+    description:
+      "Specialized programs for international investors who wish to buy in Florida.",
+  },
 ];
 
 const LoanTypes: React.FC<LoanTypesProps> = ({ onOpenForm }) => {
   return (
-    <section id="services" className="min-h-screen bg-navy-800 py-20 px-6 flex flex-col justify-center relative">
+    <section
+      id="services"
+      className="min-h-screen bg-navy-800 py-20 px-6 flex flex-col justify-center relative"
+    >
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <span className="text-gold-400 font-bold tracking-widest uppercase">Nuestros Productos</span>
+          <span className="text-gold-400 font-bold tracking-widest uppercase">
+            Our Products
+          </span>
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mt-4">
-            Soluciones para Cada Necesidad
+            Solutions for Every Need
           </h2>
         </div>
 
@@ -60,7 +70,9 @@ const LoanTypes: React.FC<LoanTypesProps> = ({ onOpenForm }) => {
               <div className="w-14 h-14 bg-navy-800 rounded-lg flex items-center justify-center text-gold-500 mb-6 group-hover:scale-110 transition-transform">
                 {loan.icon}
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">{loan.title}</h3>
+              <h3 className="text-xl font-bold text-white mb-3">
+                {loan.title}
+              </h3>
               <p className="text-gray-400 leading-relaxed">
                 {loan.description}
               </p>
@@ -69,9 +81,7 @@ const LoanTypes: React.FC<LoanTypesProps> = ({ onOpenForm }) => {
         </div>
 
         <div className="flex justify-center">
-          <Button onClick={onOpenForm}>
-            CONSULTAR ELEGIBILIDAD
-          </Button>
+          <Button onClick={onOpenForm}>CHECK ELIGIBILITY</Button>
         </div>
       </div>
     </section>

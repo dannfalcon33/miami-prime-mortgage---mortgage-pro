@@ -41,37 +41,37 @@ const ContactForm: React.FC<ContactFormProps> = ({ isOpen, onClose }) => {
 
   return (
     <>
-      <Modal isOpen={isOpen} onClose={onClose} title="Comienza tu Solicitud">
+      <Modal isOpen={isOpen} onClose={onClose} title="Start Your Application">
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <label className={labelClasses}>Nombre Completo</label>
-              <input required type="text" name="name" value={formData.name} onChange={handleInputChange} className={inputClasses} placeholder="Juan Pérez" />
+              <label className={labelClasses}>Full Name</label>
+              <input required type="text" name="name" value={formData.name} onChange={handleInputChange} className={inputClasses} placeholder="John Doe" />
             </div>
             <div className="space-y-2">
-              <label className={labelClasses}>Correo Electrónico</label>
-              <input required type="email" name="email" value={formData.email} onChange={handleInputChange} className={inputClasses} placeholder="juan@ejemplo.com" />
+              <label className={labelClasses}>Email Address</label>
+              <input required type="email" name="email" value={formData.email} onChange={handleInputChange} className={inputClasses} placeholder="john@example.com" />
             </div>
           </div>
           
           <div className="space-y-2">
-            <label className={labelClasses}>Teléfono</label>
+            <label className={labelClasses}>Phone Number</label>>
             <input required type="tel" name="phone" value={formData.phone} onChange={handleInputChange} className={inputClasses} placeholder="+1 (305) 555-0000" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <label className={labelClasses}>Monto a Solicitar</label>
+              <label className={labelClasses}>Loan Amount</label>
               <input required type="number" name="amount" value={formData.amount} onChange={handleInputChange} className={inputClasses} placeholder="500,000" />
             </div>
             <div className="space-y-2">
-              <label className={labelClasses}>Puntuación Crediticia</label>
+              <label className={labelClasses}>Credit Score</label>
               <select name="creditScore" value={formData.creditScore} onChange={handleInputChange} className={inputClasses}>
-                <option value="">Seleccione rango</option>
-                <option value="excellent">Excelente (720+)</option>
-                <option value="good">Bueno (690-719)</option>
-                <option value="fair">Regular (630-689)</option>
-                <option value="poor">Necesita Mejora (&lt;630)</option>
+                <option value="">Select range</option>
+                <option value="excellent">Excellent (720+)</option>
+                <option value="good">Good (690-719)</option>
+                <option value="fair">Fair (630-689)</option>
+                <option value="poor">Needs Improvement (&lt;630)</option>
               </select>
             </div>
           </div>
@@ -80,29 +80,29 @@ const ContactForm: React.FC<ContactFormProps> = ({ isOpen, onClose }) => {
              <div className="space-y-2">
               <label className={labelClasses}>Downpayment</label>
               <select name="downPayment" value={formData.downPayment} onChange={handleInputChange} className={inputClasses}>
-                <option value="">Seleccione porcentaje</option>
+                <option value="">Select percentage</option>
                 <option value="3.5">3.5% (FHA)</option>
                 <option value="5">5%</option>
                 <option value="10">10%</option>
                 <option value="20">20%</option>
-                <option value="20+">Más del 20%</option>
+                <option value="20+">More than 20%</option>
               </select>
             </div>
             <div className="space-y-2">
-              <label className={labelClasses}>Tipo de Propiedad</label>
+              <label className={labelClasses}>Property Type</label>
               <select name="propertyType" value={formData.propertyType} onChange={handleInputChange} className={inputClasses}>
-                <option value="">Seleccione uso</option>
-                <option value="primary">Primera Vivienda</option>
-                <option value="secondary">Segunda Vivienda (Vacacional)</option>
-                <option value="investment">Propiedad de Inversión</option>
+                <option value="">Select usage</option>
+                <option value="primary">Primary Residence</option>
+                <option value="secondary">Secondary Home (Vacation)</option>
+                <option value="investment">Investment Property</option>
               </select>
             </div>
           </div>
 
           <Button type="submit" className="w-full mt-4">
-            ENVIAR SOLICITUD
+            SUBMIT APPLICATION
           </Button>
-          <p className="text-xs text-gray-500 text-center">Tus datos están seguros y protegidos con nosotros.</p>
+          <p className="text-xs text-gray-500 text-center">Your data is safe and secure with us.</p>
         </form>
       </Modal>
 
@@ -112,8 +112,8 @@ const ContactForm: React.FC<ContactFormProps> = ({ isOpen, onClose }) => {
           <div className="w-16 h-16 bg-green-900/50 rounded-full flex items-center justify-center mx-auto mb-4 border border-green-500/30">
             <CheckCircle className="w-10 h-10 text-green-500" />
           </div>
-          <h3 className="text-2xl font-serif font-bold text-white mb-2">¡Solicitud Recibida!</h3>
-          <p className="text-gray-400 mb-8">Gracias por contactarnos. Un asesor revisará tu perfil y te contactará en breve.</p>
+          <h3 className="text-2xl font-serif font-bold text-white mb-2">Application Received!</h3>
+          <p className="text-gray-400 mb-8">Thank you for contacting us. An advisor will review your profile and contact you shortly.</p>
           
           <div className="space-y-3">
             <a 
@@ -123,7 +123,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ isOpen, onClose }) => {
               className="flex items-center justify-center gap-2 w-full py-3 bg-green-600 hover:bg-green-700 text-white rounded-md transition-colors"
             >
               <MessageCircle size={20} />
-              Contactar por WhatsApp
+              Contact via WhatsApp
             </a>
             
             <a 
@@ -133,7 +133,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ isOpen, onClose }) => {
               className="flex items-center justify-center gap-2 w-full py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors"
             >
               <Calendar size={20} />
-              Agendar Reunión (Calendly)
+              Schedule Meeting (Calendly)
             </a>
           </div>
         </div>

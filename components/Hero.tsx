@@ -68,23 +68,23 @@ const Hero: React.FC<HeroProps> = ({ onOpenForm }) => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <span className="inline-block py-1 px-3 border border-white/30 rounded-full text-white text-sm tracking-wider mb-4 uppercase backdrop-blur-sm">
-            Expertos en Bienes Raíces de Miami
+            Miami Real Estate Experts
           </span>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white leading-tight mb-4">
-            Tu Llave al Paraíso <br />
-            <span className="text-gold-400">Inmobiliario</span>
+            Your Key to Real Estate <br />
+            <span className="text-gold-400">Paradise</span>
           </h1>
           <h2 className="text-xl md:text-2xl text-gray-200 mb-6 font-light">
-            Financiamiento hipotecario personalizado, rápido y transparente.
+            Personalized, fast, and transparent mortgage financing.
           </h2>
           <p className="text-gray-300 max-w-xl text-lg mb-10 md:mx-0 mx-auto">
-            Hacemos realidad tu sueño de invertir o vivir en Miami con las tasas
-            más competitivas del mercado y un servicio de clase mundial.
+            We make your dream of investing or living in Miami a reality with
+            the most competitive rates in the market and world-class service.
           </p>
 
           <div className="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
             <Button onClick={onOpenForm} className="w-full md:w-auto">
-              SOLICITAR PRE-CALIFICACIÓN
+              APPLY FOR PRE-QUALIFICATION
             </Button>
 
             <button
@@ -94,7 +94,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenForm }) => {
               <div className="w-8 h-8 rounded-full bg-white text-navy-900 flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Play className="w-4 h-4 ml-1" fill="currentColor" />
               </div>
-              <span className="font-medium">Ver Video</span>
+              <span className="font-medium">Watch Video</span>
             </button>
           </div>
         </motion.div>
@@ -118,12 +118,12 @@ const Hero: React.FC<HeroProps> = ({ onOpenForm }) => {
               src="https://videos.pexels.com/video-files/7578552/7578552-hd_1920_1080_30fps.mp4"
               type="video/mp4"
             />
-            Tu navegador no soporta el tag de video.
+            Your browser does not support the video tag.
           </video>
           <div className="p-4 bg-navy-900 text-white">
-            <h3 className="text-lg font-bold">Descubre Miami Prime Mortgage</h3>
+            <h3 className="text-lg font-bold">Discover Miami Prime Mortgage</h3>
             <p className="text-sm text-gray-300">
-              Conoce más sobre nuestros servicios exclusivos.
+              Learn more about our exclusive services.
             </p>
           </div>
         </div>
